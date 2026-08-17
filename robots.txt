@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /curriculo.html
+
+Sitemap: https://rivaux.com.br/sitemap.xml

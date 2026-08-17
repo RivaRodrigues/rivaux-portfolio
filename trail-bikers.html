@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="page-case page-trail-bikers">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Case Trail Bikers: app de segurança e comunidade para ciclistas | RivaUX</title>
+    <meta name="description" content="Estudo de caso mobile: pesquisa, ideação, protótipo de alta fidelidade no Figma e teste de usabilidade de um app de trilha focado em segurança e comunidade.">
+    <link rel="canonical" href="https://rivaux.com.br/trail-bikers.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="RivaUX">
+    <meta property="og:url" content="https://rivaux.com.br/trail-bikers.html">
+    <meta property="og:title" content="Case Trail Bikers: UX focado em segurança e comunidade">
+    <meta property="og:description" content="Do desk research ao teste com usuários: um app mobile para quem pedala em trilha.">
+    <meta property="og:image" content="https://rivaux.com.br/assets/image/og-rivaux.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/image/fav-black.png">
+    <link rel="apple-touch-icon" href="assets/image/fav-black.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Material Symbols Rounded (Google). icon_names baixa so os icones usados nesta pagina. -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0&icon_names=check_circle,mail,school,web&display=block" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.463 3.488A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    </svg>
+
+    <nav id="main-nav">
+        <div class="logo">
+            <a href="index.html" aria-label="RivaUX — início">
+                <img src="assets/image/Logo-RivaUX-Branco-Azul.png" class="logo-desktop" alt="RivaUX" width="160" height="30">
+                <img src="assets/image/Logo-RivaUX-Branco-Azul.png" class="logo-mobile" alt="RivaUX" width="56" height="30">
+            </a>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html" class="magnetic-link">Home</a>
+            <a href="index.html#sobre" class="magnetic-link">Sobre</a>
+            <a href="index.html#case" class="magnetic-link">Projetos</a>
+            <a href="index.html#servicos" class="magnetic-link">Serviços</a>
+            <div id="nav-underline"></div>
+        </div>
+
+        <div class="nav-social-inner">
+            <a href="https://www.linkedin.com/in/rivelinorodrigues" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a>
+            <a href="https://github.com/rivarodrigues" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#contato" class="btn-contact">Falar comigo<div class="btn-spotlight"></div></a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-overlay">
+            <span class="ham-line ham-line-1"></span>
+            <span class="ham-line ham-line-2"></span>
+            <span class="ham-line ham-line-3"></span>
+        </button>
+    </nav>
+
+    <div class="mobile-overlay" id="mobile-overlay">
+        <a href="index.html" data-text="HOME">Home</a>
+        <a href="index.html#sobre" data-text="SOBRE">Sobre</a>
+        <a href="index.html#case" data-text="PROJETOS">Projetos</a>
+        <a href="index.html#servicos" data-text="SERVIÇOS">Serviços</a>
+        <a href="#contato" data-text="FALAR COMIGO">Falar comigo</a>
+    </div>
+
+    <main id="conteudo">
+        <article>
+            <header class="case-hero">
+                <div class="hero-split">
+                    <div>
+                        <p class="breadcrumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Case 02</p>
+                        <h1>Quem pedala longe <span class="blue">pedala com medo</span></h1>
+                        <p class="lead">App mobile de segurança e comunidade para ciclistas de trilha. Do desk research ao teste com usuários — estudo de caso da minha pós-graduação em UX.</p>
+                        <a href="https://trailbikers.figma.site/" target="_blank" rel="noopener" class="btn-view-all">Ver Protótipo</a>
+                    </div>
+                    <div class="hero-phone">
+                        <!-- Rivelino: exporte a tela de capa como trailbikers-capa.webp, mesmo padrão das outras -->
+                        <img src="assets/image/trailbikers-capa.webp" alt="Tela de abertura do app Trail Bikers" width="700" height="1400" fetchpriority="high">
+                    </div>
+                </div>
+            </header>
+
+            <dl class="case-facts">
+                <div class="case-fact">
+                    <dt>Tipo</dt>
+                    <dd>Produto mobile — protótipo de alta fidelidade</dd>
+                </div>
+                <div class="case-fact">
+                    <dt>Meu papel</dt>
+                    <dd>Pesquisa, ideação, UI, protótipo e testes</dd>
+                </div>
+                <div class="case-fact">
+                    <dt>Ferramentas</dt>
+                    <dd>Figma, Crazy 8's, Matriz de Priorização</dd>
+                </div>
+                <div class="case-fact">
+                    <dt>Validação</dt>
+                    <dd>5 testes presenciais, 3 tarefas, 100% de conclusão</dd>
+                </div>
+            </dl>
+
+            <div class="case-body">
+                <div class="resumo-grid">
+                    <div class="resumo-card">
+                        <span class="rotulo">O problema</span>
+                        <h2>Ferramenta certa, contexto errado</h2>
+                        <p>Strava e Wikiloc foram feitos para performance e acervo de rotas. O ciclista de trilha está longe do asfalto, muitas vezes <strong>sem sinal</strong>, e sem forma simples de pedir ajuda se cair.</p>
+                    </div>
+                    <div class="resumo-card">
+                        <span class="rotulo">A aposta</span>
+                        <h2>Segurança antes de engajamento</h2>
+                        <p>Três funcionalidades, não trinta: <strong>botão de pânico, grupos de pedal e eventos</strong>. Gamificação — o item mais fácil de vender — ficou de fora para proteger o foco.</p>
+                    </div>
+                    <div class="resumo-card is-result">
+                        <span class="rotulo">O resultado</span>
+                        <h2>Validado e já com a próxima iteração mapeada</h2>
+                        <p>Os cinco usuários concluíram as três tarefas. O teste expôs <strong>quatro pontos de fricção</strong>, sendo um grave: o botão de emergência funcionava, mas não avisava que estava funcionando.</p>
+                    </div>
+                </div>
+
+                <div class="phone-grid">
+                    <figure class="phone">
+                        <div class="phone-frame">
+                            <img src="assets/image/trailbikers-panico.webp" alt="Tela do botão de pânico do app Trail Bikers" width="700" height="1479" loading="lazy">
+                        </div>
+                        <figcaption><strong>Botão de pânico</strong>Confirmação por deslize, para não disparar sozinho no guidão.</figcaption>
+                    </figure>
+                    <figure class="phone">
+                        <div class="phone-frame">
+                            <img src="assets/image/trailbikers-grupos.webp" alt="Tela de descoberta de grupos de pedal do app Trail Bikers" width="700" height="1341" loading="lazy">
+                        </div>
+                        <figcaption><strong>Grupos de pedal</strong>No lugar do grupo de WhatsApp onde a informação se perde.</figcaption>
+                    </figure>
+                    <figure class="phone">
+                        <div class="phone-frame">
+                            <img src="assets/image/trailbikers-eventos.webp" alt="Tela de eventos do app Trail Bikers" width="700" height="1385" loading="lazy">
+                        </div>
+                        <figcaption><strong>Eventos</strong>Data, local, nível e quem já confirmou presença.</figcaption>
+                    </figure>
+                </div>
+
+                <section class="chapter">
+                    <div class="chapter-head">
+                        <span class="chapter-eyebrow">O processo</span>
+                        <h2><span class="white">Como cheguei</span> <span class="blue">nesse recorte</span></h2>
+                    </div>
+                    <div class="chapter-body">
+                        <p>Comecei por desk research: relatórios de mercado, fóruns e avaliações dos apps concorrentes na App Store e no Google Play. Três reclamações se repetiam — mapa que não carrega sem sinal, impossibilidade de pedir ajuda em local isolado, e grupo de WhatsApp caótico para organizar pedal.</p>
+                        <p>Isso virou a proto-persona <strong>Ricardo, 34 anos</strong>, que passou a ser o critério de decisão do projeto: ideia bonita que não resolvia uma dor dele, caía.</p>
+
+                        <details class="detalhe">
+                            <summary>Onde os concorrentes não olham</summary>
+                            <div class="conteudo">
+                                <div class="table-wrap">
+                                    <table class="case-table">
+                                        <thead>
+                                            <tr><th>Funcionalidade</th><th>Strava</th><th>Wikiloc</th><th>Oportunidade</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Mapas offline confiáveis</td><td>Pago e limitado</td><td>Pago</td><td class="destaque">Alta</td></tr>
+                                            <tr><td>Botão de pânico</td><td>Pago e complexo</td><td>Fraco</td><td class="destaque">Alta</td></tr>
+                                            <tr><td>Eventos e grupos locais</td><td>Fraco</td><td>Fraco</td><td class="destaque">Alta</td></tr>
+                                            <tr><td>Condição da trilha pela comunidade</td><td>—</td><td>Fraco</td><td class="destaque">Alta</td></tr>
+                                            <tr><td>GPS integrado</td><td>Forte</td><td>Forte</td><td>Requisito básico</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>Eles competem em performance e acervo de rotas. Segurança e comunidade local ficaram descobertas — foi por essa brecha que o projeto entrou.</p>
+                            </div>
+                        </details>
+
+                        <details class="detalhe">
+                            <summary>Por que a gamificação ficou de fora</summary>
+                            <div class="conteudo">
+                                <p>A ideação usou Crazy 8's — oito esboços em oito minutos, com cronômetro, para impedir apego à primeira ideia. Depois veio a matriz de impacto contra esforço.</p>
+                                <p>Pontos e medalhas engajam, aparecem em todo concorrente e seriam o item mais fácil de mostrar numa apresentação. Mas custariam caro em complexidade e desviariam o foco do que o MVP precisava provar: que o app deixa o ciclista mais seguro. Foram eliminados.</p>
+                            </div>
+                        </details>
+
+                        <details class="detalhe">
+                            <summary>A paleta e o porquê do laranja</summary>
+                            <div class="conteudo">
+                                <p>Regra de proporção 60/30/10 com tipografia Outfit. O laranja não é escolha estética: é a cor associada a atenção e alerta, e precisa ser reconhecida por alguém cansado, no meio do mato, possivelmente em pânico.</p>
+                                <div class="paleta">
+                                    <span class="cor cor-preto"><i></i> 60% &nbsp;#000000</span>
+                                    <span class="cor cor-grafite"><i></i> 30% &nbsp;#272727</span>
+                                    <span class="cor cor-laranja"><i></i> 10% &nbsp;#E97900</span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="chapter">
+                    <div class="chapter-head">
+                        <span class="chapter-eyebrow">O teste</span>
+                        <h2><span class="white">Cinco pessoas</span> <span class="blue">quebrando o protótipo</span></h2>
+                    </div>
+                    <div class="chapter-body">
+                        <p>Cinco testes presenciais com protocolo Think Aloud. Todos concluíram as tarefas — o que valida a proposta. Mas o que interessa num teste não é o que funcionou.</p>
+                        <div class="pull-quote">Um botão que funciona mas não avisa que está funcionando é, na prática, um botão quebrado.</div>
+                        <p>No "segure para confirmar", ninguém sabia se a contagem tinha começado. Num fluxo de emergência, essa dúvida é inaceitável — e só apareceu porque alguém de verdade colocou o dedo na tela.</p>
+
+                        <details class="detalhe">
+                            <summary>Os quatro pontos de fricção encontrados</summary>
+                            <div class="conteudo">
+                                <div class="achado sev-alta">
+                                    <span class="sev">Alta</span>
+                                    <h3>O botão não dizia que estava contando</h3>
+                                    <p>Violação direta da primeira heurística de Nielsen: visibilidade do status do sistema.</p>
+                                    <p class="fala">"Eu estou apertando... já foi? Tenho que soltar?"</p>
+                                </div>
+                                <div class="achado sev-media">
+                                    <span class="sev">Média</span>
+                                    <h3>E depois que o alerta sai?</h3>
+                                    <p>Os usuários não sabiam se podiam guardar o celular ou se fechar o app cancelaria o pedido de socorro.</p>
+                                    <p class="fala">"Ok, enviou. E agora? Posso mexer no celular ou isso cancela?"</p>
+                                </div>
+                                <div class="achado sev-media">
+                                    <span class="sev">Média</span>
+                                    <h3>Grupo e evento pareciam a mesma coisa</h3>
+                                    <p>Dois dos cinco não distinguiram as seções. Grupo é comunidade permanente, evento tem data — a interface não deixava isso evidente sozinha.</p>
+                                </div>
+                                <div class="achado sev-baixa">
+                                    <span class="sev">Baixa</span>
+                                    <h3>Ninguém viu o filtro</h3>
+                                    <p>Três usuários rolaram a lista inteira sem perceber o ícone no topo. Ícone sozinho, sem rótulo, some.</p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="chapter">
+                    <div class="chapter-head">
+                        <span class="chapter-eyebrow">O aprendizado</span>
+                        <h2><span class="white">Barato agora,</span> <span class="blue">caro depois</span></h2>
+                    </div>
+                    <div class="chapter-body">
+                        <p>Corrigir feedback visual num protótipo do Figma custa uma tarde. Descobrir o mesmo problema com o app publicado custa um ciclo inteiro de desenvolvimento — e, num app de segurança, custa a confiança de quem estava contando com ele.</p>
+                        <p>É por isso que eu testo antes de escrever código. A próxima iteração já tem escopo definido: indicador de progresso no botão, tela de estado pós-alerta e rótulo junto ao ícone de filtro.</p>
+                        <div class="stack-list u-mt-30">
+                            <span class="tag">UX Research</span>
+                            <span class="tag">Benchmarking</span>
+                            <span class="tag">Proto-persona</span>
+                            <span class="tag">Crazy 8's</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design System</span>
+                            <span class="tag">Teste de usabilidade</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="case-body">
+                <div class="chapter">
+                    <div class="chapter-head">
+                        <span class="chapter-eyebrow">Além deste case</span>
+                        <h2><span class="white">Outros</span> <span class="blue">projetos</span></h2>
+                    </div>
+                    <div class="chapter-body">
+                        <p>Este é o lado de pesquisa e produto. O case do CEDESP mostra o mesmo processo levado até o código, rodando em produção.</p>
+                    </div>
+                </div>
+                <div class="others-grid reveal-cascade stack-cards">
+                    <article class="other-card">
+                        <div class="icon-badge"><span class="msi" aria-hidden="true">check_circle</span></div>
+                        <h3>Sistema de gestão CEDESP</h3>
+                        <p>Matrícula, turmas, frequência e relatórios num cadastro único. React + Firebase, em produção.</p>
+                        <span class="tag">UX + Front-end</span>
+                        <a href="projetos.html" class="card-link">Ver o case</a>
+                    </article>
+                    <article class="other-card">
+                        <div class="icon-badge"><span class="msi" aria-hidden="true">web</span></div>
+                        <h3>rivaux.com.br</h3>
+                        <p>Este site: HTML, CSS e JavaScript puros, animações em GSAP e publicação na Vercel.</p>
+                        <span class="tag">Front-end</span>
+                    </article>
+                    <article class="other-card">
+                        <div class="icon-badge"><span class="msi" aria-hidden="true">school</span></div>
+                        <h3>Formação em tecnologia</h3>
+                        <p>Material didático e aulas de criação de páginas web, com mais de 15 anos de sala.</p>
+                        <span class="tag">Educação</span>
+                    </article>
+                </div>
+            </div>
+        </article>
+
+        <section class="case-cta" id="contato">
+            <h2>Seu site está perdendo cliente?<br><span class="blue">Vamos conversar.</span></h2>
+            <p>Me chame no WhatsApp e eu faço uma análise gratuita do seu site: o que afasta quem chega, o que trava a decisão e o que dá para resolver primeiro.</p>
+            <div class="cta-actions">
+                <a href="https://wa.me/5511939271712?text=Ol%C3%A1%2C%20Rivelino!%20Vi%20o%20case%20do%20Trail%20Bikers%20e%20quero%20falar%20sobre%20o%20meu%20projeto." target="_blank" rel="noopener" class="btn-whatsapp">
+                    <svg class="icon"><use href="#i-whatsapp"></use></svg> Falar no WhatsApp
+                </a>
+                <a href="mailto:contato@rivaux.com.br" class="btn-view-all btn-secondary">contato@rivaux.com.br</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/image/logo-rivaux.png" alt="RivaUX" width="130" height="40" loading="lazy">
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#case">Projetos</a>
+                <a href="index.html#servicos">Serviços</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/rivelinorodrigues" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a>
+                <a href="https://github.com/rivarodrigues" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a>
+                <a href="mailto:contato@rivaux.com.br" aria-label="E-mail"><span class="msi" aria-hidden="true">mail</span></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="ano">2026</span> RivaUX — Rivelino Rodrigues. Todos os direitos reservados.</p>
+            <div class="footer-meta">
+                <a href="curriculo.html">Currículo</a>
+                <span>Design &amp; código por Rivelino Rodrigues</span>
+            </div>
+        </div>
+        <div class="giant-text" aria-hidden="true">RIVA UX</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
+
+    <script defer src="js/case.js"></script>
+</body>
+</html>
