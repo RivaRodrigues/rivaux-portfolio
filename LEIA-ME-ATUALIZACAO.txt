@@ -1,0 +1,18 @@
+RivaUX — pacote sincronizado v6
+
+Substitua estes arquivos no projeto mantendo as pastas.
+NÃO apague as pastas assets/ e docs/ que já existem no projeto.
+
+Este pacote espera estes arquivos já existentes no seu projeto:
+- assets/image/curriculo-criativo.png
+- docs/curriculo-UX-Design.pdf
+- docs/curriculo-texto.pdf
+
+Principais correções consolidadas:
+- cards do currículo com ícones/badges consistentes em todas as seções;
+- animação 3D/fade do currículo;
+- animações em cascata no currículo;
+- mensagem do WhatsApp padronizada em todos os CTAs;
+- caminhos do logo preservados;
+- cache de CSS/JS corrigido no vercel.json;
+- query de versão adicionada a CSS/JS para forçar atualização imediata.
